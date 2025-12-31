@@ -13,11 +13,11 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-            <span className="block text-white">Ton Permis ?</span>
-            <span className="block text-primary mt-2">Tu l'as !</span>
+            <span className="block text-white">Votre Permis de Conduire</span>
+            <span className="block text-primary mt-2">Notre Engagement</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10 font-light">
-            "Si non, contacte-nous." La formation de qualité pour une route plus sûre à Lomé.
+            Formation de qualité, moniteurs expérimentés et accompagnement personnalisé pour votre réussite à Lomé.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
