@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle, Car, BookOpen, Clock, ShieldCheck } from "lucide-react";
 
 export default function Home() {
@@ -7,8 +8,19 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-secondary text-white py-20 lg:py-32 overflow-hidden">
         {/* Abstract Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black"></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/images/au-ec-capi.jpg"
+            alt="Photo de fond"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          {/* Calque couleur (baisse/monte l'opacité ici) */}
+          <div className="absolute inset-0 bg-secondary/80" />
+          {/* Optionnel: effet radial par-dessus le calque */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white/10 via-black/40 to-black/80" />
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -24,7 +36,7 @@ export default function Home() {
               href="/contact"
               className="px-8 py-4 bg-primary text-white font-bold rounded-lg shadow-lg hover:bg-rose-700 transition transform hover:-translate-y-1 text-lg"
             >
-              Je m'inscris maintenant
+              Je m&apos;inscris maintenant
             </Link>
             <Link
               href="/formations"
@@ -50,7 +62,7 @@ export default function Home() {
                 <ShieldCheck className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">École Agréée</h3>
-              <p className="text-gray-600">Reconnue par l'État (Arrêté Interministériel), nous garantissons une formation conforme aux normes de sécurité.</p>
+              <p className="text-gray-600">Reconnue par l&apos;État (Arrêté Interministériel), nous garantissons une formation conforme aux normes de sécurité.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
               <div className="w-14 h-14 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -82,7 +94,7 @@ export default function Home() {
             {/* Card 1 */}
             <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 flex flex-col hover:shadow-lg transition">
               <div className="h-3 bg-brand-blue w-full"></div>
-              <div className="p-8 flex-grow">
+              <div className="p-8 grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Permis B - Classique</h3>
                 <p className="text-gray-500 mb-6 text-sm">Idéal pour apprendre à votre rythme.</p>
                 <ul className="space-y-3 mb-8">
@@ -109,7 +121,7 @@ export default function Home() {
               <div className="bg-primary py-2 text-center text-white text-xs font-bold uppercase tracking-wider">
                 Recommandé
               </div>
-              <div className="p-8 flex-grow">
+              <div className="p-8 grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Permis B - Pro</h3>
                 <p className="text-gray-500 mb-6 text-sm">Pour une maîtrise totale de la route.</p>
                 <ul className="space-y-3 mb-8">
@@ -134,7 +146,7 @@ export default function Home() {
              {/* Card 3 */}
              <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 flex flex-col hover:shadow-lg transition">
               <div className="h-3 bg-accent w-full"></div>
-              <div className="p-8 flex-grow">
+              <div className="p-8 grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Formation Accélérée</h3>
                 <p className="text-gray-500 mb-6 text-sm">Votre permis en 2 à 4 semaines.</p>
                 <ul className="space-y-3 mb-8">
@@ -167,13 +179,11 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-20 bg-secondary text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-brand-blue rounded-full opacity-20 blur-3xl"></div>
         
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à prendre la route ?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Rejoignez les centaines d'élèves qui ont obtenu leur permis avec Auto-École La Capitale.
+            Rejoignez les centaines d&apos;élèves qui ont obtenu leur permis avec Auto-École La Capitale.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

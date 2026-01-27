@@ -13,12 +13,31 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    console.log('Form submitted:', formData);
-    // In a real app, this would be a server action or API call
+
+    const whatsappNumber = "22890865351"; // +228 90 86 53 51 (format WhatsApp: sans + ni espaces)
+
+    const message = [
+      "Bonjour Auto-École La Capitale,",
+      "",
+      "Je vous contacte via le formulaire du site :",
+      `Nom : ${formData.name.trim()}`,
+      `Email : ${formData.email.trim()}`,
+      `Téléphone : ${formData.phone.trim()}`,
+      "",
+      "Message :",
+      formData.message.trim(),
+    ].join("\n");
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    // Ouvre WhatsApp (web ou app) avec le message prêt à envoyer
+    if (typeof window !== "undefined") {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
     setStatus('success');
     setFormData({ name: '', email: '', phone: '', message: '' });
-    
+
     // Reset status after 5 seconds
     setTimeout(() => setStatus(null), 5000);
   };
@@ -106,12 +125,12 @@ export default function ContactPage() {
             <div className="mt-10 h-64 bg-gray-200 rounded-xl overflow-hidden relative shadow-inner">
                <iframe 
                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666406240228!2d1.17387!3d6.17536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTAnMzEuMyJOIDHCsDEwJzI1LjkiRQ!5e0!3m2!1sfr!2stg!4v1625000000000!5m2!1sfr!2stg" 
+                 title="Carte - Agoè Vakpossito"
                  width="100%" 
                  height="100%" 
-                 style={{border:0}} 
                  allowFullScreen={true} 
                  loading="lazy"
-                 className="absolute inset-0"
+                 className="absolute inset-0 border-0"
                ></iframe>
                <div className="absolute bottom-2 left-2 bg-white px-3 py-1 text-xs font-semibold rounded shadow">
                  Agoè Vakpossito
