@@ -41,7 +41,7 @@ export default function ServicesPage() {
 
   const otherServices = [
     {
-      title: "CANAL+ / CANAL BOX",
+      title: "Distributeur AGRÉÉ CANAL+",
       description:
         "Point de réabonnement officiel. Renouvelez vos bouquets rapidement.",
       icon: <Tv className="w-10 h-10 text-yellow-500" />,
@@ -49,6 +49,11 @@ export default function ServicesPage() {
     {
       title: "WIFI LA CAPITALE",
       description: "Service d'accès internet haut débit.",
+      icon: <Wifi className="w-10 h-10 text-brand-blue" />,
+    },
+    {
+      title: "Transfert d'argent national et international",
+      description: "Service de transfert d'argent a l'échelle national et international.",
       icon: <Wifi className="w-10 h-10 text-brand-blue" />,
     },
   ];
@@ -104,7 +109,7 @@ export default function ServicesPage() {
             <span className="absolute left-0 top-1/2 w-full h-px bg-gray-200 z-0"></span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-gl mx-auto">
             {otherServices.map((service, index) => (
               <div
                 key={index}

@@ -6,10 +6,20 @@ import {
   MapPin,
   CheckCircle,
   Facebook,
-  Instagram,
-  Twitter,
   MessageCircle,
 } from "lucide-react";
+
+const TiktokIcon = ({ size = 24 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.232 10.192 6.337 6.337 0 0 0 10.192-5.23V7.037a9.61 9.61 0 0 0 4.273 1.047v-3.398a4.805 4.805 0 0 1-1.474-1.047Z" />
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -50,7 +60,7 @@ const Footer = () => {
                 href="#"
                 className="p-2 bg-gray-800 rounded-full hover:bg-primary transition-colors text-white"
               >
-                <Instagram size={18} />
+                <TiktokIcon size={18} />
               </a>
               <a
                 href="https://wa.me/22890865351"
@@ -141,13 +151,10 @@ const Footer = () => {
               </h3>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li className="flex justify-between border-b border-gray-800 pb-1">
-                  <span>Lun - Ven</span>
-                  <span className="text-white font-medium">08:00 - 18:00</span>
+                  <span>Lun - Sam</span>
+                  <span className="text-white font-medium">08:00 - 20:00</span>
                 </li>
-                <li className="flex justify-between border-b border-gray-800 pb-1">
-                  <span>Samedi</span>
-                  <span className="text-white font-medium">08:00 - 13:00</span>
-                </li>
+
                 <li className="flex justify-between">
                   <span>Dimanche</span>
                   <span className="text-gray-500 italic">Fermé</span>
@@ -173,12 +180,15 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-xs font-medium">
             &copy; {new Date().getFullYear()}{" "}
-            <span className="text-gray-300">Auto-École La Capitale</span>.
-            Tous droits réservés.
+            <span className="text-gray-300">Auto-École La Capitale</span>. Tous
+            droits réservés.
           </p>
           <div className="flex gap-6 text-xs text-gray-500 font-medium">
-            <Link href="https://p5sog.vercel.app" className="hover:text-white transition-colors">
-              Propulser par 
+            <Link
+              href="https://p5sog.vercel.app"
+              className="hover:text-white transition-colors"
+            >
+              Propulser par
               <span className="text-gray-300"> P5SOG</span>
             </Link>
           </div>

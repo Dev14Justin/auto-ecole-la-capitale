@@ -113,8 +113,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 mb-1">Horaires</h3>
                   <p className="text-gray-600">
-                    Lundi - Vendredi : 08h00 - 18h00<br />
-                    Samedi : 08h00 - 13h00<br />
+                    Lundi - Samedi : 08h00 - 20h00<br />
                     Dimanche : Fermé
                   </p>
                 </div>
