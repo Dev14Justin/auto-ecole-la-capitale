@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Car, FileText, Shield, Monitor, Wifi, Tv } from "lucide-react";
+import { Car, FileText, Shield, Wifi, Tv, Banknote } from "lucide-react";
 
 export const metadata = {
   title: "Nos Services - Auto-École La Capitale",
   description:
-    "Plus que le permis : Carte Grise, Assurance, Plaques d'immatriculation, Canal+ et Wifi à Lomé.",
+    "Plus que le permis : Carte Grise, Assurance, Plaques d\'immatriculation, Canal+ et Wifi à Lomé.",
 };
 
 export default function ServicesPage() {
@@ -53,8 +53,9 @@ export default function ServicesPage() {
     },
     {
       title: "Transfert d'argent national et international",
-      description: "Service de transfert d'argent a l'échelle national et international.",
-      icon: <Wifi className="w-10 h-10 text-brand-blue" />,
+      description:
+        "Service de transfert d'argent a l'échelle national et international.",
+      icon: <Banknote className="w-10 h-10 text-green-600" />,
     },
   ];
 
@@ -66,8 +67,8 @@ export default function ServicesPage() {
             Nos Services Complémentaires
           </h1>
           <p className="text-xl text-gray-300">
-            L'Auto-École La Capitale, c'est aussi un centre de services pour
-            faciliter votre quotidien d'automobiliste.
+            L&apos;Auto-École La Capitale, c&apos;est aussi un centre de
+            services pour faciliter votre quotidien d&apos;automobiliste.
           </p>
         </div>
       </div>
